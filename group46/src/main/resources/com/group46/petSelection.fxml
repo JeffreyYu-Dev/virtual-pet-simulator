@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.BorderPane ?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.group46.controllers.petSelection"
+            stylesheets="@styles/petSelection.css">
+    <center>
+        <VBox fx:id="wrapper"
+              alignment="CENTER"
+              spacing="30">
+
+            <Label style="-fx-font-size: 5em">Select a pet!</Label>
+            <HBox fx:id="imageContainer" alignment="CENTER" spacing="30">
+                <StackPane>
+                    <ImageView
+                            fx:id="image1"
+                            onMouseClicked="#handleImageClick"
+                            fitHeight="400"
+                            fitWidth="400"
+                            preserveRatio="true">
+                    </ImageView>
+                </StackPane>
+                <StackPane>
+                    <ImageView
+                            fx:id="image2"
+                            onMouseClicked="#handleImageClick"
+                            fitHeight="400"
+                            fitWidth="400"
+                            preserveRatio="true">
+                    </ImageView>
+                </StackPane>
+                <StackPane>
+                    <ImageView
+                            fx:id="image3"
+                            onMouseClicked="#handleImageClick"
+                            fitHeight="400"
+                            fitWidth="400"
+                            preserveRatio="true">
+                    </ImageView>
+                </StackPane>
+            </HBox>
+            <HBox alignment="CENTER" spacing="30">
+                <Button fx:id="backButton" onAction="#goBack" text="Back"/>
+                <Button fx:id="nextButton" onAction="#goNext" text="Next" disable="true"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

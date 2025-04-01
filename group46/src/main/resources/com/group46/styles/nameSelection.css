@@ -1,0 +1,42 @@
+.root {
+    -fx-background-image: url('../assets/images/menuBackground.jpg');
+    -fx-display: flex;
+    -fx-alignment-vertical: center;
+    -fx-alignment-horizontal: center;
+    -fx-font-family: 'Press Start 2P';
+}
+
+#container {
+    -fx-background-color: rgba(90, 90, 90, 0.75);
+    -fx-background-radius: 15px;
+    -fx-max-width: 900px;
+    -fx-text-fill: white;
+    -fx-pref-height: 350px;
+}
+
+.button {
+    -fx-background-radius: 15px;
+    -fx-text-fill: white;
+    -fx-font-size: 2em;
+}
+
+#createButton {
+    -fx-background-color: #2e7be6;
+}
+
+#createButton:hover {
+    -fx-background-color: #235fb1;
+}
+
+#backButton {
+    -fx-background-color: #c82828;
+}
+
+#backButton:hover {
+    -fx-background-color: #911c1c;
+}
+
+#petNameTextField {
+    -fx-font-size: 25px;
+    -fx-pref-height: 30px;
+}

@@ -1,0 +1,48 @@
+.root {
+    -fx-background-image: url('../assets/images/menuBackground.jpg');
+    -fx-display: flex;
+    -fx-alignment-vertical: center;
+    -fx-alignment-horizontal: center;
+    -fx-font-family: 'Press Start 2P';
+}
+
+.selected-image {
+    -fx-border-color: rgb(67, 169, 241);
+    -fx-border-radius: 200px;
+    -fx-border-width: 7px;
+    -fx-background-color: rgba(103, 177, 251, 0.7);
+    -fx-background-radius: 200px;
+}
+
+#wrapper {
+    -fx-min-width: 100%;
+    -fx-min-height: 100%;
+}
+
+StackPane {
+    -fx-background-color: rgba(90, 90, 90, 0.7);
+    -fx-background-radius: 200px;
+}
+
+#nextButton {
+    -fx-background-color: #49ba30;
+}
+
+#nextButton:hover {
+    -fx-background-color: #2e781e;
+}
+
+#backButton {
+    -fx-background-color: #c82828;
+}
+
+#backButton:hover {
+    -fx-background-color: #931d1d;
+}
+
+.button {
+    -fx-background-radius: 15px;
+    -fx-pref-width: 160px;
+    -fx-pref-height: 70px;
+    -fx-font-size: 2em;
+}

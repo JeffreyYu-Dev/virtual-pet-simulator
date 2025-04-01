@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane ?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+
+<StackPane xmlns="http://javafx.com/javafx/8.0.171"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.group46.controllers.play"
+           stylesheets="@styles/play.css">
+
+    <BorderPane fx:id="container">
+        <top>
+            <!-- Your top content will go here (HBox, VBox, etc.) -->
+        </top>
+
+        <bottom>
+            <VBox alignment="CENTER">
+                <padding>
+                    <Insets bottom="40"/>
+                </padding>
+                <HBox fx:id="commandBar" alignment="CENTER" spacing="30">
+                    <Button styleClass="commandButton" text="Bed" onAction="#bedButton" fx:id="bedButtonId"/>
+                    <Button styleClass="commandButton" text="Play" onAction="#playButton" fx:id="playButtonId"/>
+                    <Button styleClass="commandButton" text="Exercise" onAction="#exerciseButton"
+                            fx:id="exerciseButtonId"/>
+                    <Button styleClass="commandButton" text="Vet" onAction="#vetButton" fx:id="vetButtonId"/>
+                    <Button styleClass="commandButton" text="🎁" fx:id="packButton" onAction="#packOpening"/>
+                    <Button styleClass="commandButton" text="Exit" style="-fx-background-color: red"
+                            onAction="#exitButton"/>
+                </HBox>
+            </VBox>
+        </bottom>
+
+        <left>
+            <VBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets left="20" top="50"/>
+                </padding>
+                <VBox fx:id="inventoryBox" alignment="CENTER" spacing="10">
+                    <padding>
+                        <Insets left="20" top="20" bottom="20" right="20"/>
+                    </padding>
+                    <Label>Common Food</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="commonFood" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveCommonFood"
+                                fx:id="commonFoodButtonId"/>
+                    </HBox>
+                    <Label>Rare Food</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="rareFood" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveRareFood" fx:id="rareFoodButtonId"/>
+                    </HBox>
+                    <Label>Legendary Food</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="legendaryFood" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveLegendaryFood"
+                                fx:id="legendaryFoodButtonId"/>
+                    </HBox>
+                    <Label>Common Gifts</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="commonGift" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveCommonGift"
+                                fx:id="commonGiftButtonId"/>
+                    </HBox>
+                    <Label>Rare Gifts</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="rareGift" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveRareGift" fx:id="rareGiftButtonId"/>
+                    </HBox>
+                    <Label>Legendary Gifts</Label>
+                    <HBox alignment="CENTER" spacing="30">
+                        <Label styleClass="number" fx:id="legendaryGift" text="0"/>
+                        <Button text="Give" styleClass="itemButton" onAction="#giveLegendaryGift"
+                                fx:id="legendaryGiftButtonId"/>
+                    </HBox>
+                </VBox>
+                <VBox fx:id="stats" alignment="CENTER" spacing="40">
+                    <padding>
+                        <Insets right="35" top="20" bottom="20"/>
+                    </padding>
+                    <HBox alignment="CENTER_RIGHT" spacing="10">
+                        <Label>Health</Label>
+                        <ProgressBar fx:id="healthBar" prefWidth="100" style="-fx-accent: green;"/>
+                        <Label fx:id="healthInt"/>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" spacing="10">
+                        <Label>Happiness</Label>
+                        <ProgressBar fx:id="happinessBar" prefWidth="100" style="-fx-accent: blue;"/>
+                        <Label fx:id="happinessInt"/>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" spacing="10">
+                        <Label>Energy</Label>
+                        <ProgressBar fx:id="energyBar" prefWidth="100" style="-fx-accent: yellow;"/>
+                        <Label fx:id="energyInt"/>
+                    </HBox>
+                    <HBox alignment="CENTER_RIGHT" spacing="10">
+                        <Label>Fullness</Label>
+                        <ProgressBar fx:id="fullnessBar" prefWidth="100" style="-fx-accent: red;"/>
+                        <Label fx:id="fullnessInt"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </left>
+
+        <right>
+            <VBox alignment="BOTTOM_CENTER" spacing="20">
+                <VBox fx:id="messageBox">
+                    <padding>
+                        <Insets right="15" top="15" bottom="15" left="15"/>
+                    </padding>
+                    <Label fx:id="message" wrapText="true">Messages will appear here!</Label>
+                </VBox>
+                <VBox fx:id="scoreBox" alignment="CENTER" spacing="20">
+                    <padding>
+                        <Insets right="15" top="15" bottom="15" left="15"/>
+                    </padding>
+                    <Label style="-fx-font-size: 2em;" textAlignment="CENTER">Score</Label>
+                    <Label fx:id="scoreLabel" textAlignment="CENTER"
+                           style="-fx-font-size: 2em; -fx-text-fill: yellow;"/>
+                </VBox>
+            </VBox>
+        </right>
+    </BorderPane>
+
+    <!-- Fixed centered -->
+    <StackPane alignment="CENTER" mouseTransparent="true">
+        <ImageView fx:id="spriteBox" preserveRatio="true"/>
+    </StackPane>
+    <AnchorPane fx:id="stateContainer" maxWidth="100" maxHeight="100"
+                prefWidth="100" prefHeight="100" StackPane.alignment="TOP_RIGHT">
+        <StackPane.margin>
+            <Insets top="95" right="120"/>
+        </StackPane.margin>
+        <ImageView fx:id="stateBox" fitWidth="100" preserveRatio="true"/>
+    </AnchorPane>
+</StackPane>

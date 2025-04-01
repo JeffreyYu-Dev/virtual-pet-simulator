@@ -1,0 +1,18 @@
+{
+  "save" : {
+    "name" : "Steve",
+    "last_played" : "2025-03-31 18:05:36",
+    "playtime" : 3
+  },
+  "pet" : {
+    "name" : "Steve",
+    "type" : "dog",
+    "health" : 100.0,
+    "energy" : 97.0,
+    "happiness" : 99.0,
+    "fullness" : 97.0
+  },
+  "day" : 0,
+  "status_is_alive" : true,
+  "score" : 0
+}

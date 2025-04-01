@@ -1,0 +1,79 @@
+.root {
+    -fx-background-image: url('../assets/images/menuBackground.jpg');
+    -fx-display: flex;
+    -fx-alignment-vertical: center;
+    -fx-alignment-horizontal: center;
+    -fx-font-family: 'Press Start 2P';
+}
+
+.savesContainer {
+    -fx-padding: 30px;
+}
+
+.button {
+    -fx-background-radius: 15px;
+    -fx-max-width: 500px;
+    -fx-pref-height: 70px;
+    -fx-font-size: 2em;
+}
+
+.backButton {
+    -fx-background-color: #c82828;
+}
+
+.backButton:hover {
+    -fx-background-color: #931d1d;
+}
+
+.nextButton {
+    -fx-background-color: #49ba30;
+}
+
+.nextButton:hover {
+    -fx-background-color: #2e781e;
+}
+
+
+.deleteButton {
+    -fx-background-color: #c82828;
+    -fx-text-fill: white;
+}
+
+.deleteButton:hover {
+    -fx-background-color: #931d1d;
+}
+
+
+.savesList {
+    -fx-padding: 20px;
+
+}
+
+.gameSave {
+    -fx-pref-height: 200px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+
+}
+
+.dead {
+    -fx-background-color: rgba(200, 40, 40, 0.5);
+    -fx-border-color: rgba(200, 40, 40, 1);
+}
+
+.selected {
+    -fx-border-color: rgb(67, 169, 241);
+    -fx-border-radius: 8px;
+    -fx-background-color: rgba(103, 177, 251, 0.7);
+    -fx-background-radius: 8px;
+}
+
+.default {
+    -fx-border-color: #a8a29e;
+}
+
+
+.scroll-pane {
+    -fx-background: rgba(90, 90, 90, 0.7);
+    -fx-background-color: transparent;
+}

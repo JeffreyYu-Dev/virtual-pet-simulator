@@ -1,0 +1,18 @@
+{
+  "save" : {
+    "name" : "Bill",
+    "last_played" : "2025-03-31 18:07:59",
+    "playtime" : 113
+  },
+  "pet" : {
+    "name" : "Bill",
+    "type" : "fish",
+    "health" : 100.0,
+    "energy" : 56.99999999999999,
+    "happiness" : 96.0,
+    "fullness" : 63.0
+  },
+  "day" : 0,
+  "status_is_alive" : true,
+  "score" : 180
+}

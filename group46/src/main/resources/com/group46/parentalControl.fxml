@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane fx:controller="com.group46.controllers.parentalControl"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="@styles/parentalControls.css">
+    <center>
+        <HBox alignment="CENTER" spacing="40">
+            <!--        Parental controls-->
+            <VBox alignment="CENTER" spacing="50" styleClass="parentalControlsContainer">
+                <Label alignment="CENTER" textAlignment="CENTER" text="Parental Controls"
+                       style="-fx-font-weight: 900; -fx-font-size: 40px;-fx-text-fill: white"/>
+                <!--            top layer-->
+                <VBox alignment="CENTER_LEFT" spacing="20">
+                    <Label text="Limitations" style="-fx-font-weight: 700;-fx-font-size: 20px;-fx-text-fill: white"/>
+                    <CheckBox fx:id="timeLimitBox" text="Time Restrictions"
+                              style="-fx-font-size: 15px;-fx-text-fill: white"/>
+                    <!--                   set time restriction container-->
+                    <HBox alignment="CENTER_LEFT" spacing="20">
+                        <HBox>
+                            <Label text="From: " style="-fx-font-size: 15px;-fx-text-fill: white"/>
+                            <TextField fx:id="fromInput"/>
+                        </HBox>
+                        <HBox>
+                            <Label text="To: " style="-fx-font-size: 15px;-fx-text-fill: white"/>
+                            <TextField fx:id="toInput"/>
+                        </HBox>
+                    </HBox>
+                </VBox>
+
+                <!--  second layer-->
+                <VBox alignment="CENTER_LEFT" spacing="20">
+                    <Label text="Statistics" style="-fx-font-weight: 700;-fx-font-size: 20px;-fx-text-fill: white"/>
+                    <HBox>
+                        <VBox spacing="20">
+                            <Label fx:id="total" text="Total playtime: "
+                                   style="-fx-font-size: 15px;-fx-text-fill: white"/>
+                            <Label fx:id="avg" text="Average Time per day: "
+                                   style="-fx-font-size: 15px;-fx-text-fill: white"/>
+                        </VBox>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <VBox>
+                            <Button fx:id="reset" text="Reset Statistics" onAction="#handleReset"
+                                    style="-fx-font-size: 15px;-fx-text-fill: white" styleClass="dangerButton"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- third layer-->
+                <VBox alignment="CENTER_LEFT" spacing="20">
+                    <Label text="Revive Pet" style="-fx-font-weight: 700;-fx-font-size: 20px;-fx-text-fill: white"/>
+                    <HBox>
+                        <!-- ADDING DEAD SAVES -->
+                        <ScrollPane fx:id="deadPetList" fitToWidth="true" prefViewportWidth="200" prefHeight="150">
+                            <VBox spacing="5">
+                                <Label text="Save name"/>
+                                <!-- Add more content as needed -->
+                            </VBox>
+                        </ScrollPane>
+                        <Region prefWidth="20"/>
+                        <VBox spacing="10">
+                            <Label fx:id="name" text="Name" style="-fx-text-fill: white"/>
+                            <Label fx:id="day" text="Day" style="-fx-text-fill: white"/>
+                            <Label fx:id="timePlayed" text="Playtime" style="-fx-text-fill: white"/>
+                            <Label fx:id="lastPlaye" text="Last played" style="-fx-text-fill: white"/>
+                            <Button text="Revive Pet" onAction="#handleRevive"
+                                    style="-fx-font-size: 14px; -fx-text-fill: white" styleClass="dangerButton"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!--                Back to main menu-->
+                <Button text="Back" onAction="#goBack" styleClass="backButton" style="-fx-text-fill: white"/>
+            </VBox>
+            <VBox alignment="CENTER" styleClass="imageContainer">
+                <ImageView
+                        fx:id="imageContainer"
+                        fitHeight="400"
+                        fitWidth="400"
+                        preserveRatio="true">
+                </ImageView>
+
+            </VBox>
+
+            <padding>
+                <Insets bottom="50" top="50" right="50" left="50"/>
+            </padding>
+        </HBox>
+    </center>
+</BorderPane>

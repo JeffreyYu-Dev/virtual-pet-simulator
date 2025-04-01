@@ -1,0 +1,92 @@
+.root {
+    -fx-display: flex;
+    -fx-alignment-vertical: center;
+    -fx-alignment-horizontal: center;
+    -fx-font-family: 'Press Start 2P';
+}
+
+.button {
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 0.8em;
+}
+
+#commandBar{
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+    -fx-background-radius: 20px;
+    -fx-max-width: 900px;
+    -fx-pref-height: 100px;
+}
+
+.commandButton{
+    -fx-background-color: rgb(58, 114, 213);
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 2, 2); /* Soft shadow */
+    -fx-border-color: transparent;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-text-fill: white;
+}
+
+.commandButton:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0.3, 4, 4);
+}
+
+#inventoryBox{
+    -fx-background-color: rgba(90, 90, 90, 0.8);
+    -fx-background-radius: 20px;
+    -fx-min-width: 300px;
+    -fx-min-height: 390px;
+    -fx-max-height: 390;
+}
+
+#stats{
+    -fx-background-color: rgba(90, 90, 90, 0.8);
+    -fx-background-radius: 20px;
+    -fx-min-width: 300px;
+    -fx-min-height: 200px;
+}
+
+.number{
+    -fx-text-fill: rgb(39, 255, 223);
+}
+
+#messageBox{
+    -fx-pref-height: 200px;
+    -fx-pref-width: 200px;
+    -fx-background-color: rgba(90,90,90,0.8);
+    -fx-background-radius:15px;
+}
+
+#scoreBox{
+    -fx-pref-height: 200px;
+    -fx-pref-width: 200px;
+    -fx-background-color: rgba(90,90,90,0.8);
+    -fx-background-radius:15px;
+}
+
+#stateContainer {
+    -fx-translate-x: -20%;
+    -fx-translate-y: -10%;
+}
+
+.itemButton{
+    -fx-max-height: 20px;
+    -fx-max-width: 80px;
+    -fx-font-size: 0.7em;
+    -fx-background-color: #368fef;
+    -fx-background-radius: 10px;
+}
+
+.itemButton:hover{
+    -fx-background-color: #2a6eb8;
+}
+
+#packButton{
+    -fx-max-width: 50px;
+    -fx-background-color: #e4c317;
+    -fx-font-size: 2em;
+}

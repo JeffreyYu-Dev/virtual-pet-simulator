@@ -1,0 +1,18 @@
+{
+  "save" : {
+    "name" : "Sam",
+    "last_played" : "2025-03-31 17:55:55",
+    "playtime" : 183
+  },
+  "pet" : {
+    "name" : "Sam",
+    "type" : "cat",
+    "health" : 100,
+    "energy" : 100,
+    "happiness" : 100,
+    "fullness" : 100
+  },
+  "day" : 0,
+  "status_is_alive" : true,
+  "score" : 0
+}

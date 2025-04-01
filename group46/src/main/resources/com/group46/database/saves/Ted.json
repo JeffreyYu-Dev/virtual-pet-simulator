@@ -1,0 +1,18 @@
+{
+  "save" : {
+    "name" : "Ted",
+    "last_played" : "2025-03-31 17:53:00",
+    "playtime" : 181
+  },
+  "pet" : {
+    "name" : "Ted",
+    "type" : "fish",
+    "health" : 0.0,
+    "energy" : 88.0,
+    "happiness" : 0.0,
+    "fullness" : 0.0
+  },
+  "day" : 0,
+  "status_is_alive" : false,
+  "score" : 0
+}

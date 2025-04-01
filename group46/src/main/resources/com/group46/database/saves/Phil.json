@@ -1,0 +1,18 @@
+{
+  "save" : {
+    "name" : "Phil",
+    "last_played" : "2025-03-31 18:05:50",
+    "playtime" : 6
+  },
+  "pet" : {
+    "name" : "Phil",
+    "type" : "cat",
+    "health" : 100.0,
+    "energy" : 94.0,
+    "happiness" : 98.0,
+    "fullness" : 94.0
+  },
+  "day" : 0,
+  "status_is_alive" : true,
+  "score" : 0
+}
